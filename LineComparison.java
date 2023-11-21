@@ -37,5 +37,26 @@ public class LineComparison {
          else
          System.out.println("Not same length");
 
+
+         //uc-3 branch name compare
+         System.out.println("Enter line 1 coordinates");
+         x1=sc.nextInt();
+         y1=sc.nextInt();
+         x2=sc.nextInt();
+         y2=sc.nextInt();
+         line1=lc.findLen(x1, y1, x2, y2);
+         System.out.println("Enter line 2 coordinates");
+         x1=sc.nextInt();
+         y1=sc.nextInt();
+         x2=sc.nextInt();
+         y2=sc.nextInt();
+         line2=lc.findLen(x1, y1, x2, y2);
+         int comp=Double.compare(line1, line2);
+         if(comp==0)
+         System.out.println("both have equal lengths");
+         else if(comp<0)
+         System.out.println("Line 1 is smaller than line 2");
+         else
+         System.out.println("Line 1 is greater than line 2");
     }
 }
