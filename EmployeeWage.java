@@ -37,6 +37,10 @@ public class EmployeeWage {
                         break;
                 }
 
+                //uc-5 branch name monthlyWage
+                int monthlyWage=20*dailyWage;
+                System.out.println("Monthly Wage is Rs. "+monthlyWage);
+
     }
     
 }
