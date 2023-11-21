@@ -18,5 +18,24 @@ public class LineComparison {
         LineComparison lc = new LineComparison();
         double len=lc.findLen(x1,y1,x2,y2);
         System.out.println("Length of the line is : "+len+" units");
+
+        //uc-2 branch equals
+        System.out.println("Enter line 1 coordinates");
+         x1=sc.nextInt();
+         y1=sc.nextInt();
+         x2=sc.nextInt();
+         y2=sc.nextInt();
+         double line1=lc.findLen(x1, y1, x2, y2);
+         System.out.println("Enter line 2 coordinates");
+         x1=sc.nextInt();
+         y1=sc.nextInt();
+         x2=sc.nextInt();
+         y2=sc.nextInt();
+         double line2=lc.findLen(x1, y1, x2, y2);
+         if(line1==line2)
+         System.out.println("Both of them are of same length that is "+line1);
+         else
+         System.out.println("Not same length");
+
     }
 }
