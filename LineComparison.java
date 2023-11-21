@@ -58,5 +58,7 @@ public class LineComparison {
          System.out.println("Line 1 is smaller than line 2");
          else
          System.out.println("Line 1 is greater than line 2");
+
+         sc.close();
     }
 }
