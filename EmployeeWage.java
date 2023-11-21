@@ -41,6 +41,15 @@ public class EmployeeWage {
                 int monthlyWage=20*dailyWage;
                 System.out.println("Monthly Wage is Rs. "+monthlyWage);
 
+                //uc-6 branch name limitWage
+                int Days=20;
+                int finalWage=0;
+                while(Days>0){
+                    Days--;
+                    finalWage+=dailyWage;
+                }
+                System.out.println("wage after 20 days : Rs. "+finalWage);
+
     }
     
 }
