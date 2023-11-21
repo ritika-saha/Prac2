@@ -20,6 +20,23 @@ public class EmployeeWage {
                 //uc-3 branch name parttime
                 int parttimeWage=20*4;
                 System.out.println("Part-time employee Wage: Rs. "+parttimeWage);
+
+                //uc-4 branch name wageSwitch
+                System.out.println("is the Employee Fulltime? yes/no");
+                Scanner sc=new Scanner(System.in);
+                String s=sc.nextLine();
+                switch (s) {
+                    case "yes": System.out.println("Daily wage is : Rs. "+dailyWage);
+                        
+                        break;
+                    case "no": System.out.println("Daily wage is : Rs. "+parttimeWage);
+                    break;
+                
+                    default:
+                    System.out.println("invalid");
+                        break;
+                }
+
     }
     
 }
