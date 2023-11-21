@@ -16,6 +16,10 @@ public class EmployeeWage {
                 //uc-2 - branch name wage
                 int dailyWage=20*8;
                 System.out.println("Daily wage is : Rs. "+dailyWage);
+
+                //uc-3 branch name parttime
+                int parttimeWage=20*4;
+                System.out.println("Part-time employee Wage: Rs. "+parttimeWage);
     }
     
 }
