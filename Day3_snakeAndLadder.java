@@ -10,30 +10,28 @@ class gamePlay {
          Random random = new Random();
         int randomNumber = random.nextInt(( 6- 1) + 1) + 1;
         diceRollNum++;
-        System.out.println("current Position: "+position);
         return randomNumber;
     }
-    void play(){
-        int moves=diceRoll();
-         Random random = new Random();
-        int option = random.nextInt(( 3- 1) + 1) + 1;
-        if(option==1){
-            System.out.println("No Moves");
-        return;
-        }
-        else if(option==2){
-            System.out.println("Ladder !");
-            if(position+moves<=100)
-            position+=moves;
-        }
-        else if(option==3){
-            System.out.println("Snake !");
-            if(position-moves<0)
-            position=0;
-            else
-            position-=moves;
-        }
+  void play() {
+    int moves = diceRoll();
+    Random random = new Random();
+    int option = random.nextInt((3 - 1) + 1) + 1;
+    if (option == 1) {
+        System.out.println("-------No Moves------");
+    } else if (option == 2) {
+        System.out.println("------Ladder!-----");
+        if (position + moves <= 100)
+            position += moves;
+    } else if (option == 3) {
+        System.out.println("------Snake!-------");
+        if (position - moves < 0)
+            position = 0;
+        else
+            position -= moves;
     }
+    System.out.println("Final Position: " + position);
+}
+
 
 
 }
@@ -43,7 +41,7 @@ public class Day3_snakeAndLadder {
         //for single player
         int position=0;
         gamePlay gp=new gamePlay(position);
-        while(gp.position!=100){
+        while(gp.position<100){
             gp.play();
         }
         
