@@ -38,12 +38,12 @@ class gamePlay {
 public class Day3_snakeAndLadder {
 
     public static void main(String[] args){
-        //for single player
+        //for single player singlePlayer_SnL branch
         int position=0;
         gamePlay gp=new gamePlay(position);
         while(gp.position<100){
             gp.play();
-        }
+         }
         
         System.out.println("Number of dice rolls :"+gp.diceRollNum);
     }
