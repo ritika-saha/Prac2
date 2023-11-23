@@ -150,5 +150,7 @@ public class AddressBook {
             ob.display();
         }
 
+        scan.close();
+
     }
 }
