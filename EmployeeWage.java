@@ -2,6 +2,51 @@ import java.util.Scanner;
 /**
  * wage
  */ 
+
+  class wagePerCompany {
+  String employeeType;
+  String companyName;
+  int dailyWage;
+  int monthlyWage;
+  int days;
+  int hours;
+  int rate;
+  wagePerCompany(String et,String cn,int d,int h,int r){
+    employeeType=et;
+    companyName=cn;
+    days=d;
+    hours=h;
+    rate=r;
+    dailyWage=0;
+    monthlyWage=0;
+  }
+  void calcWage(){
+    switch (employeeType) {
+                    case "yes": System.out.println("Employee is Fulltime");
+                    dailyWage=rate*hours;
+                        
+                        break;
+                    case "no": System.out.println("Employee is part-time");
+                    dailyWage=rate*(hours/2);
+                    break;
+                
+                    default:
+                    System.out.println("invalid");
+                        break;
+                }
+    monthlyWage=days*dailyWage;
+
+  }
+
+  void displayWage(){
+    System.out.println("--------------------"+companyName+"-----------------");
+    System.out.println("daily Wage is Rs: "+dailyWage);
+    System.out.println("Monthly Wage is Rs: "+monthlyWage);
+  }
+  
+    
+}
+
  class wage {
   String employeeType;
   int dailyWage;
@@ -92,8 +137,17 @@ public class EmployeeWage {
                 ob.calcWage();
                 ob.displayWage();
 
-
-
+                //uc-8 branch name uc8_employeeWage
+                System.out.println("ENTER COMPANY NAME, wage, number of working days and working hours per month");
+                String name=sc.nextLine();
+                int w=sc.nextInt();
+                int days=sc.nextInt();
+                int hrs=sc.nextInt();
+                System.out.println("is the Employee fulltime?(yes/no)");
+                String t=sc.next();
+                wagePerCompany ob1=new wagePerCompany(t, name, days, hrs,w);
+                ob1.calcWage();
+                ob1.displayWage();
 
                 sc.close();
 
