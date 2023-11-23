@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 //first and last names, address,city, state, zip, phone number and email...
 class Address{
+    //uc1 branch createAddress
     ArrayList<String> firstName = new ArrayList<>();
     ArrayList<String> lastName = new ArrayList<>(); 
     ArrayList<String> address = new ArrayList<>();
