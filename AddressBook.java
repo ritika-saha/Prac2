@@ -91,6 +91,29 @@ void editAddress() {
 }
 
 
+//uc-4 deleteAddress
+void deleteAddress(){
+    System.out.println("Enter the first name of the person you want to delete");
+    String ss=sc.nextLine();
+     int ind = 0;
+    for (int i = 0; i < firstName.size(); i++) {
+        if (firstName.get(i).equals(ss)) {  // Use equals for string comparison
+            ind = i;
+            break;
+        }
+    }
+ 
+    firstName.remove(ind);
+    lastName.remove(ind);
+    address.remove(ind);
+    city.remove(ind);
+    state.remove(ind);
+    zip.remove(ind);
+    phone.remove(ind);
+    email.remove(ind);
+
+}
+
     void display(){
         System.out.println("Name\taddress\tcity\tstate\tzip\tphone\temail");
         System.out.println("----------------------------------------------------------------------------------------------");
@@ -109,12 +132,21 @@ public class AddressBook {
 
         Address ob=new Address();
         ob.addNewAddress();
+        ob.addNewAddress();
+        ob.addNewAddress();
         ob.display();
         System.out.println("do you want to edit? yes/no");
         Scanner scan=new Scanner(System.in);
         String ss=scan.nextLine();
         if(ss.equals("yes")){
             ob.editAddress();
+            ob.display();
+        }
+
+        System.out.println("Do you wan to delete yes/no");
+        ss=scan.nextLine();
+        if(ss.equals("yes")){
+            ob.deleteAddress();
             ob.display();
         }
 
