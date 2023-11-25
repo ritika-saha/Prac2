@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 /**
  * wage
  */ 
@@ -143,12 +144,45 @@ public class EmployeeWage {
                 int w=sc.nextInt();
                 int days=sc.nextInt();
                 int hrs=sc.nextInt();
+                sc.nextLine();
                 System.out.println("is the Employee fulltime?(yes/no)");
                 String t=sc.next();
                 wagePerCompany ob1=new wagePerCompany(t, name, days, hrs,w);
                 ob1.calcWage();
                 ob1.displayWage();
 
+                sc.nextLine();
+                 System.out.println("ENTER COMPANY NAME, wage, number of working days and working hours per month");
+                 name=sc.nextLine();
+                 w=sc.nextInt();
+                 days=sc.nextInt();
+                 hrs=sc.nextInt();
+                 sc.nextLine();
+                System.out.println("is the Employee fulltime?(yes/no)");
+                 t=sc.next();
+                wagePerCompany ob2=new wagePerCompany(t, name, days, hrs,w);
+                ob2.calcWage();
+                ob2.displayWage();
+
+                sc.nextLine();
+                 System.out.println("ENTER COMPANY NAME, wage, number of working days and working hours per month");
+                 name=sc.nextLine();
+                 w=sc.nextInt();
+                 days=sc.nextInt();
+                 hrs=sc.nextInt();
+                 sc.nextLine();
+                System.out.println("is the Employee fulltime?(yes/no)");
+                 t=sc.next();
+                wagePerCompany ob3=new wagePerCompany(t, name, days, hrs,w);
+                ob3.calcWage();
+                ob3.displayWage();
+
+                // branch - multipleCompanies
+                ArrayList<wagePerCompany> companyList=new ArrayList<>();
+                companyList.add(ob1);
+                companyList.add(ob2);
+                companyList.add(ob3);
+                System.out.println("Companies added to list");
                 sc.close();
 
     }
