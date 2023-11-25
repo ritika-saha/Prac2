@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * wage
  */ 
 
-  class wagePerCompany {
+  class wagePerCompany implements EmployeeWageCalculator {
   String employeeType;
   String companyName;
   int dailyWage;
@@ -21,7 +21,8 @@ import java.util.ArrayList;
     dailyWage=0;
     monthlyWage=0;
   }
-  void calcWage(){
+  @Override
+  public void calcWage(){
     switch (employeeType) {
                     case "yes": System.out.println("Employee is Fulltime");
                     dailyWage=rate*hours;
@@ -39,7 +40,8 @@ import java.util.ArrayList;
 
   }
 
-  void displayWage(){
+  @Override
+  public void displayWage(){
     System.out.println("--------------------"+companyName+"-----------------");
     System.out.println("daily Wage is Rs: "+dailyWage);
     System.out.println("Monthly Wage is Rs: "+monthlyWage);
@@ -183,6 +185,8 @@ public class EmployeeWage {
                 companyList.add(ob2);
                 companyList.add(ob3);
                 System.out.println("Companies added to list");
+
+                // branch wageInterface for implementing interface
                 sc.close();
 
     }
