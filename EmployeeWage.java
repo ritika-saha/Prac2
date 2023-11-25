@@ -187,6 +187,18 @@ public class EmployeeWage {
                 System.out.println("Companies added to list");
 
                 // branch wageInterface for implementing interface
+
+                //branch companyQuery
+
+                System.out.println("---------------------------------------------------------");
+                System.out.println("Enter the name of the company whose wage you want to find out: ----");
+                sc.nextLine();
+                name=sc.nextLine();
+                for(int i=0;i<companyList.size();i++){
+                  if(companyList.get(i).companyName.equalsIgnoreCase(name)){
+                    System.out.println("Wage of the company is Rs. "+companyList.get(i).monthlyWage);
+                  }
+                }
                 sc.close();
 
     }
